@@ -1,0 +1,83 @@
+class ContentController < ApplicationController
+   layout "public"
+   
+   def home
+      get_recent_news_and_events
+      standard_content_page 'home'
+   end
+   
+   def aim
+      get_recent_news_and_events
+      standard_content_page 'aim'
+   end
+   
+   def contact_us
+      get_recent_news_and_events
+      standard_content_page 'contact_us'
+   end
+   
+   def history
+      get_recent_news_and_events
+      standard_content_page 'history'
+   end
+   
+   def practical
+      get_recent_news_and_events
+      standard_content_page 'practical'
+   end
+   
+   def teachers 
+     get_recent_news_and_events
+     @header = Page.find_by_page('teachers_header')
+     @teachers = Member.teachers.ordered
+     @footer = Page.find_by_page('teachers_footer')
+     render :template => 'content/teachers'
+   end
+   
+   def committee
+     get_recent_news_and_events
+     @header = Page.find_by_page('committee_header')
+     @committee = Member.committee_members.ordered
+     @footer = Page.find_by_page('committee_footer')
+     render :template => 'content/committee'
+   end
+   
+   def event
+     get_recent_news_and_events
+     @event = Event.find(params[:id])
+     render :template => 'content/event'
+   end
+   
+   def classes
+     get_recent_news_and_events
+     @header = Page.find_by_page('classes_header')
+     @classes = TaughtClass.all
+     @footer = Page.find_by_page('classes_footer')
+     render :template => 'content/classes'
+   end
+
+   def lesson
+     get_recent_news_and_events
+     @lesson = Lesson.find(params[:id])
+     render :template => 'content/lesson'
+   end
+      
+   def alllessons
+     get_recent_news_and_events
+     @schooldays = Event.school_days.ordered.all.reverse
+     render :template => 'content/alllessons'
+   end
+   
+private
+   def standard_content_page(page)
+      @page = Page.find_by_page(page)
+      render :template => 'content/content_page'
+   end
+   
+   def get_recent_news_and_events
+      @news = NewsItem.find(:all, :order => 'news_date desc', :limit => 5)
+      @events = Event.find(:all, :order => 'event_date asc')
+      @eventlister = EventLister.new(@events)
+   end
+   
+end
