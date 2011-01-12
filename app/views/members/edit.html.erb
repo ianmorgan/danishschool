@@ -1,7 +1,9 @@
 <h1>Editing member</h1>
 
+<%= render "shared/error_messages", :target => @member %> 
+
 <% form_for(@member) do |f| %>
-  <%= f.error_messages %>
+  
 
   <%= render :partial => 'form', :locals => {:f => f}  %>
 

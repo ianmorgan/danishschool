@@ -10,8 +10,8 @@ and to include links to any handouts or attachments
   <%=formatted_lesson_name(@lesson)%>  
 </p>
 
+<%= render "shared/error_messages", :target => @lesson %> 
 <% form_for(@lesson) do |f| %>
-  <%= f.error_messages %>
 
   <p>
     <b><%= f.label :content %>:</b><br />
