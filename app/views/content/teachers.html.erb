@@ -1,0 +1,18 @@
+<%= to_html(@header.content) %>
+
+<% @teachers.each do |teacher| %>
+<div class="taecher">
+  <h3><%=h teacher.name %></h3>
+  <%= render :partial => 'shared/member_thumbnail', :locals => { :member => teacher} %>
+  <p>
+    <%= to_html(teacher.summary) %> 
+  </p>
+  
+  <% if teacher.show_email %>
+    <p><%=h teacher.email %></p>
+  <% end %>
+  
+</div>
+<% end %>
+
+<%= to_html(@footer.content) %>

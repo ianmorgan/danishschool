@@ -1,0 +1,48 @@
+<h1>Summary</h1>
+
+<p class="fieldhelp">
+  Content has been uploaded for <b><%= @attachment.name %></b>
+</p>
+
+<p>
+This file can now be included in your content in a variety of ways - see
+the table below for more information. <i>Please note that the exact behaviour 
+will depend upon the type of file and the configuration of the user's computer. In particular 
+movie and audio files may automatically open another program such as Windows Media Player or 
+Apple iTunes</i>
+</p>
+
+<table border="1">
+  <tr>
+    <td><b>To view this as...</b></td>
+    <td><b>Copy this into your content</b></td>
+  </tr>
+
+  <tr>
+    <td>An image on your page (only if the attachment is an image file)</td>
+    <td>!/file/<%=@attachment.name%>!</td>
+  </tr>
+
+  <tr>
+    <td>A link to file to be opened in the current browser window</td>
+    <td>"your link name":/file/<%=@attachment.name%></td>
+  </tr>
+  
+  <tr>
+      <td>A link to file to be download by the user</td>
+      <td>"your link name":/download/<%=@attachment.name%></td>
+  </tr>
+  
+  <tr>
+     <td>A link to sent within the body of an email or copied
+     into another document</td>
+     <td><%= h link_to 'your link name', 
+                       :controller => 'attachment', 
+                       :action => 'view_by_name', 
+                       :name => @attachment.name,
+                       :only_path => false %></td>
+  </tr>
+</table>
+<%= link_to 'See all Attachments', :action => 'index'%>
+
+ 

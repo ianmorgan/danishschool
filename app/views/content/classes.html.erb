@@ -1,0 +1,16 @@
+<%= to_html(@header.content) %>
+
+<% @classes.each do |c| %>
+<div class="taught_class">
+  <h3><%=h c.name %></h3>
+  <p>
+    <%= to_html(c.description) %> 
+  </p>
+  <p>
+    <%= link_to 'Lessons', :action => 'alllessons' %>
+  </p>
+  
+</div>
+<% end %>
+
+<%= to_html(@footer.content) %>

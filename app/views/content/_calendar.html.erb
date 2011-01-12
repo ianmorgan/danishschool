@@ -1,0 +1,32 @@
+<div class="graypanel" align="justify">
+  <span class="smalltitle">Calendar</span><br><br>
+
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td><font face="Tahoma" size="2" color="#CC0000">Date</font></td>
+    <td><font face="Tahoma" size="2" color="#CC0000">Time</font></td>
+    <td><font face="Tahoma" size="2" color="#CC0000">Event</font></td>
+  </tr>
+  
+
+   <% @eventlister.each_by_day do |e, evenday|
+     if evenday
+       bg = 'bgcolor="#c0c0c0"'
+     else 
+       bg = ''
+     end
+   
+   %>
+   <tr>
+    <td <%=bg%> ><font face="Tahoma" size="2" color="#808080"><%=e.event_date.to_formatted_s(:rfc822)%></font></td>
+    <td <%=bg%> ><font face="Tahoma" size="2" color="#808080"><%=show_event_times(e)%></font></td>
+    <td <%=bg%> ><font face="Tahoma" size="2" color="#808080">
+       <%=link_to e.title, :controller => 'content', :action => 'event', :id => e.id %>
+    </font></td>
+   </tr>
+   <% end %>
+   
+   </table>
+   
+</div>
+

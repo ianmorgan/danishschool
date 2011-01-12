@@ -1,0 +1,9 @@
+<h1><%=@lesson.taught_class.name %> on <%=@lesson.event.event_date.to_formatted_s(:day_month_year)%></h1>
+
+<p>
+   <%=to_html(@lesson.content)%> 
+<p>
+
+<%=link_to 'Back', :action => 'event', :id => @lesson.event.id%><br/>
+<%=link_to 'All Lessons', :action => 'alllessons'%>
+

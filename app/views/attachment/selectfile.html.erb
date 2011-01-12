@@ -1,0 +1,15 @@
+<h1>Upload</h1>
+
+<p class="fieldhelp">
+  Upload a file for <b><%= @attachment.name %></b>.
+  You can upload any type of document including PDF documents, 
+  pictures, movies and audio clips. Please ensure that the 
+  file extension (e.g. .doc or .jpg) is present otherwise the 
+  file may not display in the user's browser.
+<p>
+<% form_tag({:action => :upload, :id => @attachment.id}, :multipart => true) do %>  
+    <%= file_field_tag 'picture' %>
+      <%= submit_tag 'Upload' %>
+<% end %> 
+
+ 

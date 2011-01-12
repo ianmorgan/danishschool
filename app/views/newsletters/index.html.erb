@@ -1,0 +1,19 @@
+<h1>Newsletters </h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+  </tr>
+
+
+<% @newsletters.each do |letter| %>
+  <tr>
+    <td><%=h letter.created_at.to_formatted_s(:day_month_year) %></td>
+    <td><%= link_to 'Download', :controller => 'attachment', :action => 'download', :id => letter.id %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Add newsletter', :action => 'new' %>
+<br/>
+

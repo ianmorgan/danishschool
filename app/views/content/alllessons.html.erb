@@ -1,0 +1,10 @@
+<h1>All Lessons</h1>
+
+<p>Clink on a link below to see more about the lessons on a particular day</p>
+
+<% @schooldays.each do |schoolday| %>
+ <p>
+   <%= link_to schoolday.event_date.to_formatted_s(:day_month_year), :action => 'event', :id => schoolday.id %>
+ </p>
+<% end %> 
+

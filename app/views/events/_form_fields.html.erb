@@ -1,0 +1,25 @@
+ <p>
+    <b><%= f.label :title %></b><br />
+    <%= f.text_field :title %>
+  </p> 
+  <p>
+    <b><%= f.label :event_date %></b><br />
+    <%= f.date_select :event_date %>
+  </p>
+  <p>
+    <b><%= f.label :start_time %></b><br />
+    <%= f.time_select :start_time %>
+  </p>
+  <p>
+    <b><%= f.label :end_time %></b><br />
+    <%= f.time_select :end_time %>
+  </p>
+  <p>
+    <b><%= f.label :description %></b>
+    <%= render :partial => '/shared/redcloth_help' %>
+    <%= f.text_area :description, :cols => 80, :rows => 5  %>
+  </p>
+  <p>
+    <b><%= f.label :event_type %></b><br />
+    <%= f.select :event_type, Event::EVENT_TYPES %> 
+  </p>

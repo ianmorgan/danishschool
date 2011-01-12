@@ -1,0 +1,7 @@
+ <div class="memberpicture">
+    <% if member.attachment.nil? %>
+      No picture
+    <% else %>
+      <img alt="No picture" src="<%= url_for(:controller => 'attachment', :action => 'view', :id => member.attachment.id) %>" height="100px" />
+    <% end %>
+  </div>

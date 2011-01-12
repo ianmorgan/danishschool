@@ -1,0 +1,42 @@
+<h1>Editing member</h1>
+
+<% form_for(@member) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form', :locals => {:f => f}  %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<div class="newformsection">
+  <p><b>Password</b></p>
+<p>
+    <%= link_to 'Change ', :controller => 'login', :action => 'edit_password', :id => @member.id %>
+</p>
+</div>
+
+
+<div class="newformsection">
+  <p><b>Picture</b></p>
+
+  
+<% form_tag({:action => :uploadmemberpicture, :controller => :attachment, :id => @member.id}, :multipart => true) do %>  
+
+   <p>
+     <%= render :partial => 'shared/member_thumbnail', :locals => { :member => @member } %>
+    </p>
+
+    <%= file_field_tag 'picture' %>
+      <%= submit_tag 'Upload' %>
+<% end %> 
+</div>
+
+<br/>
+
+
+ 
+
+<%= link_to 'Show', @member %> |
+<%= link_to 'Back to list', members_path %>

@@ -1,0 +1,44 @@
+<h1>Member Details</h1>
+<p>
+  <b>Name:</b>
+  <%=h @member.name %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%=h @member.summary %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @member.email %>
+</p>
+
+<p>
+  <b>Show Email:</b>
+  <%=h @member.show_email %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= render :partial => 'shared/member_thumbnail', :locals => { :member => @member } %>
+</p>
+
+<p>
+  <b>Is admin:</b>
+  <%=h @member.is_admin %>
+</p>
+
+<p>
+  <b>Is teacher:</b>
+  <%=h @member.is_teacher %>
+</p>
+
+<p>
+  <b>Is committee member:</b>
+  <%=h @member.is_committee_member %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back to list', members_path %>

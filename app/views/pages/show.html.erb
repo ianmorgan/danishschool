@@ -1,0 +1,21 @@
+<h2>Content Page Details</h2>
+
+<p>
+  <b>Page Name:</b>
+  <%=h @page.page %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @page.description%>
+</p>
+
+
+<p>
+  <b>Content:</b>
+  <%=h @page.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

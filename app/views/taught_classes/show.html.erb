@@ -1,0 +1,18 @@
+<p>
+  <b>Code:</b>
+  <%=h @taught_class.code %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @taught_class.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @taught_class.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_taught_class_path(@taught_class) %> |
+<%= link_to 'Back', taught_classes_path %>

@@ -1,0 +1,15 @@
+<h2>Lesson Content</h2>
+
+<p>
+  <b>Lesson:</b>
+  <%=formatted_lesson_name(@lesson)%>  
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @lesson.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

@@ -1,0 +1,29 @@
+<h1>New member</h1>
+
+<% form_for(@member) do |f| %>
+  <%= f.error_messages %>
+  
+  <p class="fieldhelp">
+    Create a new member. A picture 
+    can be upload by clicking on edit once 
+    the member has been created
+  </p>
+
+  <%= render :partial => 'form', :locals => {:f => f}  %>
+
+ <p>
+    <b><%= f.label :password %></b><br />
+    <%= f.password_field :password %>  
+ </p>
+ 
+ <p>
+     <b><%= f.label :password_confirmation %></b><br />
+   <%= f.password_field :password_confirmation %>   
+  </p>
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back to list', members_path %>

@@ -1,0 +1,33 @@
+<h2>Editing page</h2>
+
+<p>
+Please enter updated content. You can entering formatting 
+by using the <a href="http://redcloth.org/textile/">Textile</a> WIKI
+style markup language. 
+</p>
+
+<p>
+  <b>Page Name:</b>
+  <%=h @page.page %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @page.description%>
+</p>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <b><%= f.label :content %>:</b><br />
+    <%= render :partial => '/shared/redcloth_help' %>
+    <%= f.text_area :content, :cols => 80, :rows => 10  %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page %> |
+<%= link_to 'Back', pages_path %>

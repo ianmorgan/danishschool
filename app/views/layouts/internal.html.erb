@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Danish School DownUnder - Members area </title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'internal' %>
+</head>
+<body>
+
+<div id="page">
+  <h1 class="titlebanner">Danish School DownUnder</h1>
+  <span class="currentuser">
+    <%=show_logon_status%>
+  </span>
+  <div id="logo"></div>
+
+    <div class="content">
+      <div class="menu">
+         <% if is_admin_user %>
+           <%= link_to 'Members', :controller => :members, :action => :index %> |&nbsp;
+           <%= link_to 'Content Pages', :controller => :pages, :action => :index %> |&nbsp;
+           <%= link_to 'Attachments', :controller => :attachment, :action => :index %> |&nbsp;
+           <%= link_to 'News Items', :controller => :news_items, :action => :index %> |&nbsp;
+           <%= link_to 'Events', :controller => :events, :action => :index %> |&nbsp;
+           <%= link_to 'Classes', :controller => :taught_classes, :action => :index %> |&nbsp;
+           <%= link_to 'Lessons Content', :controller => :lessons, :action => :index %> |&nbsp;
+           <%= link_to 'Newsletters', :controller => :newsletters, :action => :index %> 
+         <% elsif is_teacher_user %>
+           <%= link_to 'Attachments', :controller => :attachment, :action => :index %> |&nbsp;
+           <%= link_to 'Lessons Content', :controller => :lessons, :action => :index %> |&nbsp;
+           <%= link_to 'Your Details', :controller => :members, :action => :edit, :id => current_user_id%> 
+         <% elsif current_user_id  %>
+           <%= link_to 'Your Details', :controller => :members, :action => 'edit', :id => current_user_id%> 
+         <% end %>
+      </div>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+</body>
+</html>

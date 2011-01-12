@@ -1,0 +1,21 @@
+<h1>Classes Taught</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+  </tr>
+
+<% @taught_classes.each do |taught_class| %>
+  <tr>
+    <td><%=h taught_class.code %></td>
+    <td><%=h taught_class.name %></td>
+    <td><%= link_to 'Show', taught_class %></td>
+    <td><%= link_to 'Edit', edit_taught_class_path(taught_class) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Class', new_taught_class_path %>

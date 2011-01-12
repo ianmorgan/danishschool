@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%=h @event.title %>
+</p>
+
+<p>
+  <b>Event date:</b>
+  <%=h @event.event_date %>
+</p>
+
+<p>
+  <b>Start Time:</b>
+  <%=h @event.start_time.to_formatted_s (:time) %>
+</p>
+
+<p>
+  <b>End Time:</b>
+  <%=h @event.end_time.to_formatted_s (:time) %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @event.description %>
+</p>
+
+<p>
+  <b>Event Type:</b>
+  <%=h @event.event_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

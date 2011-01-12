@@ -1,0 +1,20 @@
+<h1>Creat a News Item</h1>
+
+<% form_for(@news_items) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <b><%= f.label :news_date %></b><br />
+    <%= f.date_select :news_date %>
+  </p>
+  <p>
+    <b><%= f.label :news_text %></b><br />
+    <%= render :partial => 'shared/redcloth_help' %>
+    <%= f.text_area :news_text, :cols => 80, :rows => 5 %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', news_items_path %>

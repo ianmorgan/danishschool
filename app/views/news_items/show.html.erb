@@ -1,0 +1,15 @@
+<h1>News Item</h1>
+
+<p>
+  <b>News date:</b><br/>
+  <%=h @news_items.news_date %>
+</p>
+
+<p>
+  <b>News text:</b><br/>
+  <%=h @news_items.trimmed_news_text %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_item_path(@news_items) %> |
+<%= link_to 'Back', news_items_path %>

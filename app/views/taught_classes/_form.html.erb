@@ -1,0 +1,14 @@
+ <p>
+    <b><%= f.label :code %></b><br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    <b><%= f.label :name %></b><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <b><%= f.label :description %></b>
+    <%= render :partial => '/shared/redcloth_help' %>
+    <%= f.text_area :description, :cols => 80, :rows => 5  %>
+  </p>
+ 

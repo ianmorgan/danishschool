@@ -1,0 +1,45 @@
+ <p>
+    <b><%= f.label :name %></b><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <b><%= f.label :summary %></b><br />
+     <%= render :partial => '/shared/redcloth_help' %>
+     <%= f.text_area :summary, :cols => 80, :rows => 5  %>
+
+  </p>
+  <p>
+    <b><%= f.label :email %></b><br />
+    <p class="fieldhelp">
+        The email address is also the user's login name.  
+    </p>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+  <b><%= f.label :show_email %></b><br />
+    <p class="fieldhelp">
+          Show or hide the email address on the public profile.  
+    </p>
+    <%= f.check_box :show_email %>
+  </p>
+  <p>
+    <b><%= f.label :is_admin %></b><br />
+    <p class="fieldhelp">
+        Admin users can add and delete users, modify content and create new events.  
+     </p>
+    <%= f.check_box :is_admin %>
+  </p>
+  <p>
+    <b><%= f.label :is_teacher %></b><br />
+    <p class="fieldhelp">
+        Teachers appear on the teachers page and can upload content for lessons.  
+    </p>
+    <%= f.check_box :is_teacher %>
+  </p>
+  <p>
+    <b><%= f.label :is_committee_member %></b><br />
+    <p class="fieldhelp">
+        Committee members appear on the committee page.  
+    </p>
+    <%= f.check_box :is_committee_member %>
+  </p>
