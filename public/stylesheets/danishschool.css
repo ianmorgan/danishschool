@@ -1,0 +1,183 @@
+/* CSS Document */
+
+/*PAGE LAYOUT*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+
+}
+#logo{float:left; background-image:url(/images/dannish/danishschooldownunder.gif); width:150px; height:213px; background-repeat:no-repeat;}
+#topheader{float:right; width:650px; height:97px; background-color:#F0F0F0; position:relative}
+#toplinks{position:absolute; right:10px; top:10px;}
+#menu{float:right; width:650px; height:32px;}
+#submenu{float:right; width:600px; height:32px; background-image:url(/images/dannish/bg_submenu.gif); background-position:top; background-repeat:repeat-x;}
+#contenttext{float:right; width:526px;}
+#leftpanel{float:left; width:274px;}
+#footer{float:left; width:800px; background-color:#F0F0F0; padding:10px;}
+
+
+.pagecontent {
+   font: 0.8em Tahoma, sans-serif;
+   color: #666666;
+   padding: 10px;
+   text-align: left;
+   margin-top: 5px;
+   float: right;
+   width: 500px;
+ }
+
+
+.pagecontent body, .pagecontent p, .pagecontent ol, .pagecontent ul, .pagecontent td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+/*GRAY PANEL*/
+.graypanel{
+   border:solid 1px #666666; 
+   background-color:#F7F7F7; 
+   font: 0.8em Tahoma, sans-serif;
+   color: #666666;
+   padding:10px; 
+   margin:10px;
+   float: top;
+}
+
+.graypanel p {
+   background-color:#F7F7F7; 
+   font: Tahoma, sans-serif;
+   color: #666666;
+
+}
+
+/*TEXT STYLES*/
+.bodytext {
+	font: 0.7em Tahoma, sans-serif;
+	color: #666666;
+}
+
+#topheader .bodytext {
+	margin-left: 10px;
+}
+
+
+h1 {
+color:#CC0000;
+font-family:Tahoma,sans-serif;
+font-size:26px;
+font-weight:bold;
+}
+
+
+h2 {
+color:#CC0000;
+font-family:Tahoma,sans-serif;
+font-size:22px;
+font-weight:bold;
+}
+
+h3 {
+color:#CC0000;
+font-family:Tahoma,sans-serif;
+font-size:18px;
+font-weight:bold;
+}
+
+
+.titletext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color:#CC0000;
+}
+.whitetitle {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.smalltitle {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	color:#CC0000;
+}
+.smallwhitetext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #FFFFFF;
+}
+.smallwhitetext a{
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+.smallwhitetext a:hover{
+	text-decoration:underline;
+}
+.smallgraytext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color:#999999;
+}
+.smallgraytext a{
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color:#999999;
+	text-decoration:none;
+}
+.smallgraytext a:hover{
+	text-decoration:underline;
+}
+.smallredtext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color:#CC0000;
+}
+.smallredtext a{
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color:#CC0000;
+	text-decoration:none;
+}
+.smallredtext a:hover{
+	text-decoration:underline;
+}
+
+
+#navigation {
+font-size: 90%;
+}
+
+#navigation ul {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+  padding-top: 1em;
+}
+
+#navigation li {
+  display: inline;
+}
+
+#navigation a:link, #navigation a:visited {
+  padding: 0.4em 0.7em 0.4em 0.7em;
+  color: #FFFFFF;
+  background-color: #B51032; 
+  text-decoration: none;
+  border: 1px solid #711515;
+}
+#navigation a:hover { 
+ color: #FFFFFF;
+  background-color: #711515;
+}

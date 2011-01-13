@@ -1,0 +1,83 @@
+/* CSS Document */
+
+#page {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.fieldhelp  {
+  background-color:#FFF5F5;
+  border: 1px solid #FFCCCC;
+  width: 500px;
+  margin-bottom: 2px;
+  margin-top: -14px;
+  padding: 2px
+}
+
+.content div {
+   margin-top: 10px;
+}
+
+.currentuser {
+  float: right;
+  float: top;
+}
+
+.titlebanner {
+  text-align: center;
+  float: top;
+}
+
+
+/*PAGE LAYOUT*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+#logo{background:url(/images/dannish/dannish-flag-thumbnail.jpg) no-repeat; width:100px; height:75px;}
+#contenttext{float:right; width:826px;}
+#leftpanel{float:left; width:274px;}
+#footer{float:left; width:800px; background-color:#F0F0F0; padding:10px;}
+
+/*GRAY PANEL*/
+.graypanel{
+	border:solid 1px #666666; background-color:#F7F7F7; padding:10px; margin:10px;
+}
+
+/*TEXT STYLES*/
+.bodytext {
+	font: 0.7em Tahoma, sans-serif;
+	color: #666666;
+}
+
+
+h1 {
+color:#CC0000;
+font-family:Tahoma,sans-serif;
+font-size:26px;
+font-weight:bold;
+}
+
+
+h2 {
+color:#CC0000;
+font-family:Tahoma,sans-serif;
+font-size:22px;
+font-weight:bold;
+}
+
+h3 {
+color:#CC0000;
+font-family:Tahoma,sans-serif;
+font-size:18px;
+font-weight:bold;
+}
+
+.newformsection {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #FFCCCC;
+}
