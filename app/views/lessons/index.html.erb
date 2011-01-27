@@ -7,7 +7,7 @@
   </tr>
 
 <% @lessons.reverse.each do |lesson| %>
-  <% if lesson.event %>
+  <% if lesson.event # should be moved to domain model%>
   <tr>
     <td><%=h lesson.event.event_date.to_formatted_s(:day_month_year) %></td>
     <td><%=h lesson.taught_class.name %></td>

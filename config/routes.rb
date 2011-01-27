@@ -73,8 +73,7 @@ Danishschool3::Application.routes.draw do
    match  'download/:name', :controller => 'attachment', :action => 'download_by_name'
 
  match 'content/:action', :controller => 'content' 
- match 'login/:action', :controller => 'login' 
- match 'login/:action', :controller => 'login'
+ match 'login/:action(/:id)', :controller => 'login'
  match  'attachment/:action(/:id)', :controller => 'attachment'
  
 
