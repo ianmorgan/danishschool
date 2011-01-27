@@ -75,7 +75,7 @@ Danishschool3::Application.routes.draw do
  match 'content/:action', :controller => 'content' 
  match 'login/:action', :controller => 'login' 
  match 'login/:action', :controller => 'login'
- match  'attachment/:action', :controller => 'attachment'
+ match  'attachment/:action(/:id)', :controller => 'attachment'
  
 
 # match 'content/:action'
