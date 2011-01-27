@@ -67,7 +67,8 @@ class AttachmentController < ApplicationController
   end
   
   def download_by_name
-     a = Attachment.find_by_name(params[:name])
+     a = Attachment.find_by_name(params[:name])   
+ 
      send_data a.data.to_blob, 
      	:type => a.mime_type , 
      	:disposition => 'attachment', 
@@ -81,8 +82,11 @@ class AttachmentController < ApplicationController
   
   def download
     a = Attachment.find(params[:id])
-    send_data a.data.to_blob, :type => a.mime_type , :disposition => 'attachment'
-     
+    send_data a.data.to_blob, 
+	:type => a.mime_type , 
+	:disposition => 'attachment',
+ 	:filename => a.name + '.' + a.extn_from_mime_type
+    
     rescue
        render :nothing => true, :status => 404 
   end

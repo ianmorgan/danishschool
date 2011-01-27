@@ -16,8 +16,9 @@ style markup language.
   <%=h @page.description%>
 </p>
 
+
+<%= render "shared/error_messages", :target => @page %> 
 <% form_for(@page) do |f| %>
-  <%= f.error_messages %>
 
   <p>
     <b><%= f.label :content %>:</b><br />
