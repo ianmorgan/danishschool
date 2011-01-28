@@ -19,7 +19,7 @@ module ApplicationHelper
   def show_logon_status
      if is_logged_in 
        login_link = link_to('logout', :action => :logout, :controller => :login)
-       "Logged in as #{session[:login][:name]} #{login_link}" 
+       "Logged in as #{session[:login][:name]} #{login_link}".html_safe 
      else
       "Not logged in"
      end

@@ -12,7 +12,7 @@
     <td><%= link_to 'Summary', :action => 'summary', :id => attachment.id %></td>
     <td><%= link_to 'View', :action => 'view', :id => attachment.id %></td>
     <td><%= link_to 'Download', :action => 'download', :id => attachment.id %></td>
-   
+    <td><%= link_to 'Remove', :action => 'delete', :id => attachment.id, :confirm => 'Are you sure? You will need to update any content pages that show this attachment.' %></td>
   </tr>
 <% end %>
 </table>

@@ -112,7 +112,13 @@ class AttachmentController < ApplicationController
    @attachment = Attachment.find(params[:id])
    render :template => 'attachment/summary'
   end
-  
+
+  def delete
+   a = Attachment.find(params[:id])
+   a.destroy
+   flash[:notice] = 'Attachment deleted'
+   redirect_to :action => 'index'
+  end  
 
 
 end
