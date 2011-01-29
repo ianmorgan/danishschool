@@ -1,8 +1,13 @@
 <h1>Newsletters </h1>
 
+<p class="fieldhelp">
+  This pages shows all newsletters. The newest (at the top of the 
+  the list) will be displayed on the home page.        
+</p>
 <table>
   <tr>
     <th>Date</th>
+    <th>Actions</th>
   </tr>
 
 
@@ -10,9 +15,11 @@
   <tr>
     <td><%=h letter.created_at.to_formatted_s(:day_month_year) %></td>
     <td><%= link_to 'Download', :controller => 'attachment', :action => 'download', :id => letter.id %></td>
+    <td><%= link_to 'Remove', :controller => 'attachment', :action => 'delete', :id => letter.id %></td>
   </tr>
 <% end %>
 </table>
+<br>
 
 <%= link_to 'Add newsletter', :action => 'new' %>
 <br/>

@@ -36,6 +36,8 @@ body {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
+        /*font-family:Tahoma,sans-serif;*/
+
 }
 #logo{background:url(/images/dannish/dannish-flag-thumbnail.jpg) no-repeat; width:100px; height:75px;}
 #contenttext{float:right; width:826px;}
@@ -81,3 +83,10 @@ font-weight:bold;
   border-top-width: 1px;
   border-top-color: #FFCCCC;
 }
+
+.notice { 
+  color:#0101DD;
+  font-family:Tahoma,sans-serif;
+  font-size:16px;
+}
+   

@@ -22,8 +22,13 @@ Under</strong><br><a href="mailto:danishschooldownunder@gmail.com">danishschoold
 <div class="bodytext" align="left"> 
 </div>
 <div class="bodytext" align="left"><a 
-href="<%= url_for(:controller => 'attachment', :action => 'download_by_name', :name => Attachment.latest_newsletter.name)%>" 
-target="_blank">Latest newsletter in PDF format</a> 
+href="<%= url_for(:controller => 'attachment', :action => 'download', :id => Attachment.latest_newsletter.id)%>" 
+target="_blank">Latest newsletter in PDF format</a>
+</div>
+<div class="bodytext" align="left"><a 
+href="<%= url_for(:controller => 'content', :action => 'newsletters')%>" 
+>All newsletters</a> 
+ 
 </div></div>
 <div id="menu">
 <div class="smallwhitetext" 

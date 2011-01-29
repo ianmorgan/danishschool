@@ -27,8 +27,7 @@ Danishschool3::Application.routes.draw do
   
   resources :lessons
 
-  resources :newsletters
-
+ 
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -70,13 +69,12 @@ Danishschool3::Application.routes.draw do
 
    #match 'products/:id' => 'catalog#view'
    match 'file/:name', :controller => 'attachment', :action => 'view_by_name'
-   match  'download/:name', :controller => 'attachment', :action => 'download_by_name'
+   match  'download/:id', :controller => 'attachment', :action => 'download'
 
  match 'content/:action', :controller => 'content' 
  match 'login/:action(/:id)', :controller => 'login'
- match  'attachment/:action(/:id)', :controller => 'attachment'
- 
-
+ match 'attachment/:action(/:id)', :controller => 'attachment'
+ match 'newsletters/:action(/:id)', :controller => 'newsletters'
 # match 'content/:action'
 
   # See how all your routes lay out with "rake routes"

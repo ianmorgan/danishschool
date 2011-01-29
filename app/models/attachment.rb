@@ -1,4 +1,5 @@
 class Attachment < ActiveRecord::Base
+   validates_presence_of :name
    validates_inclusion_of :purpose_code, 
       :in => %w(member_picture attachment newsletter),  
       :message => "{{value}} is not a valid purpose" 

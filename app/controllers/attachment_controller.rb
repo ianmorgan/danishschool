@@ -114,11 +114,16 @@ class AttachmentController < ApplicationController
   end
 
   def delete
-   a = Attachment.find(params[:id])
-   a.destroy
-   flash[:notice] = 'Attachment deleted'
-   redirect_to :action => 'index'
+   @attachment = Attachment.find(params[:id])
+   render :template => 'attachment/confirm_delete'
+  end 
+
+  def confirm_delete
+    if params['yes']
+      a = Attachment.find(params[:id])
+      a.destroy
+      flash[:notice] = 'Attachment deleted'
+    end
+    redirect_to :action => 'index'
   end  
-
-
 end

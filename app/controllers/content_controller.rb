@@ -25,6 +25,25 @@ class ContentController < ApplicationController
       get_recent_news_and_events
       standard_content_page 'practical'
    end
+
+   def history
+      get_recent_news_and_events
+      standard_content_page 'history'
+   end
+  
+   def sponsors
+      get_recent_news_and_events
+      standard_content_page 'sponsors'
+   end
+
+   def newsletters 
+     get_recent_news_and_events
+     @header = Page.find_by_page('newletters_header')
+     @newsletters = Attachment.ordered.find_all_by_purpose_code 'newsletter'
+     @footer = Page.find_by_page('newletters_footer')
+     render :template => 'content/newletters'
+   end
+  
    
    def teachers 
      get_recent_news_and_events

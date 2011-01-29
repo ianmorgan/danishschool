@@ -1,7 +1,8 @@
 <h1>New Picture or Attachment - Step 1</h1>
 
+<%= render "shared/error_messages", :target => @attachment %> 
 <% form_for :attachment, @attachment, :url => {:action => 'create', :id => @attachment.id } do |f| %>
-  <%= f.error_messages %>
+ 
   <p>
     <b><%= f.label :name %></b><br />
     <p class="fieldhelp">

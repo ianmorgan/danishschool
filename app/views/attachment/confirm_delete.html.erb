@@ -1,0 +1,12 @@
+<h1>Confirm delete</h1>
+
+<% form_for :attachment, @attachment, :url => {:action => 'confirm_delete', :id => @attachment.id } do |f| %>
+  <p>
+  Please confirm you wish to delete <%= @attachment.name %>
+  </p>  
+  <%= f.submit 'Yes', :name => 'yes' %> <br>
+  <%= f.submit 'Cancel', :name => 'cancel' %> <br>
+  
+<% end %>
+
+ 
