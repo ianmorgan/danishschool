@@ -1,7 +1,7 @@
 <h1>Creat a News Item</h1>
 
+<%= render "shared/error_messages", :target => @news_items %>
 <% form_for(@news_items) do |f| %>
-  <%= f.error_messages %>
 
   <p>
     <b><%= f.label :news_date %></b><br />

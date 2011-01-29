@@ -1,8 +1,8 @@
 <h1>Editing event</h1>
 
+<%= render "shared/error_messages", :target => @event %> 
 <% form_for(@event) do |f| %>
-  <%= f.error_messages %>
-
+  
   <%= render :partial => 'form_fields', :locals => {:f => f} %>
   <p>
     <%= f.submit 'Update' %>

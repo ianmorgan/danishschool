@@ -1,6 +1,8 @@
 require 'base'
 class NewsItem < ActiveRecord::Base 
   include DanishSchoolHelpers
+
+  validates_presence_of :news_date, :news_text
   
   named_scope :ordered, :order => "news_date desc"
  
