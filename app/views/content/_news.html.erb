@@ -2,7 +2,7 @@
   <span class="smalltitle">News</span><br><br>
   
   <% @news.each do |news| %>
-    <span class="smallredtext"><%=news.news_date.to_formatted_s :day_month_year %>
+    <span class="smallredtext"><%=news.news_date.to_formatted_s :date_as_words %>
     <br/></span> 
     <%=to_html(news.news_text)%>
     <br/>
