@@ -38,10 +38,10 @@ class ContentController < ApplicationController
 
    def newsletters 
      get_recent_news_and_events
-     @header = Page.find_by_page('newletters_header')
-     @newsletters = Attachment.ordered.find_all_by_purpose_code 'newsletter'
-     @footer = Page.find_by_page('newletters_footer')
-     render :template => 'content/newletters'
+     @header = Page.find_by_page('newsletters_header')
+     @newsletters = Attachment.valid.newsletters.ordered
+     @footer = Page.find_by_page('newsletters_footer')
+     render :template => 'content/newsletters'
    end
   
    

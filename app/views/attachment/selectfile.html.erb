@@ -7,6 +7,7 @@
   file extension (e.g. .doc or .jpg) is present otherwise the 
   file may not display in the user's browser.
 <p>
+<%= render "shared/error_messages", :target => @attachment %> 
 <% form_tag({:action => :upload, :id => @attachment.id}, :multipart => true) do %>  
     <%= file_field_tag 'picture' %>
       <%= submit_tag 'Upload' %>

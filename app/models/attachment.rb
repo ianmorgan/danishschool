@@ -5,13 +5,16 @@ class Attachment < ActiveRecord::Base
       :message => "{{value}} is not a valid purpose" 
    
    named_scope :ordered, :order => 'created_at desc'
-   named_scope :newletters, :conditions => "purpose_code = 'newsletter'"
+   named_scope :newsletters, :conditions => "purpose_code = 'newsletter'"
+   named_scope :valid, :conditions => "data is not null"
+
 
    def extn_from_mime_type
-     {'application/pdf' => 'pdf'}[mime_type]
+     {'application/pdf' => 'pdf',
+      'image/jpeg' => 'jpg' }[mime_type]
    end
    
    def self.latest_newsletter
-     ordered.newletters.first
+     valid.ordered.newsletters.first
    end
 end

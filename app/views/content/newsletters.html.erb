@@ -1,6 +1,7 @@
 <%= to_html(@header.content) %>
 <table>
 
+
 <% @newsletters.each do |letter| %>
   <tr>
     <td><%=h letter.created_at.to_formatted_s(:long) %></td>

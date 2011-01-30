@@ -2,7 +2,7 @@ class NewslettersController < ApplicationController
   layout 'internal'
   
   def index
-     @newsletters = Attachment.ordered.find_all_by_purpose_code 'newsletter'
+     @newsletters = Attachment.valid.newsletters.ordered
      render :template => 'newsletters/index'
   end
 
@@ -13,16 +13,19 @@ class NewslettersController < ApplicationController
   end
 
   def upload
-   attachment = Attachment.find(params[:id])
+   @attachment = Attachment.find(params[:id])
    
-   f = params[:picture]
-   attachment.data = f.read
-   attachment.mime_type = f.content_type
-   attachment.save
-   
-   flash[:notice] = 'Newsletter uploaded'
-   
-   redirect_to :action => 'index'
+   if params[:picture] 
+     f = params[:picture]
+     @attachment.data = f.read
+     @attachment.mime_type = f.content_type
+     @attachment.save
+     flash[:notice] = 'Newsletter uploaded'
+     redirect_to :action => 'index'
+   else
+     @attachment.errors.add(:base, "Please select a file to upload")
+     render :template => 'attachment/selectfile'
+   end
   end
   
 
