@@ -1,5 +1,5 @@
-class AttachmentController < ApplicationController
-  layout "internal"
+class AttachmentController < AdminPageController
+  before_filter :require_login, :except => [:view, :view_by_name, :download, :download_by_name]
 
   caches_action :view
 
@@ -22,9 +22,6 @@ class AttachmentController < ApplicationController
 
   end
   
-  def test
-   render :text => 'test'
-  end
   
   def index 
     @attachments = Attachment.all :conditions => {:purpose_code => 'attachment'}

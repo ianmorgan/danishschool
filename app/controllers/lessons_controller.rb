@@ -1,4 +1,4 @@
-class LessonsController < ApplicationController
+class LessonsController < AdminPageController
   layout "internal"
   
   def index

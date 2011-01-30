@@ -1,5 +1,5 @@
-class NewsItemsController < ApplicationController
-  layout "internal"
+class NewsItemsController <  AdminPageController
+
   
   # GET /news_items
   # GET /news_items.xml

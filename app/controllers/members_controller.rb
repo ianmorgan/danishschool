@@ -1,6 +1,6 @@
-class MembersController < ApplicationController
+class MembersController < AdminPageController
 
-  before_filter :check_autentication, :except => [:show,:edit,:update]
+  before_filter :require_login, :except => [:show]
   layout :select_layout
   
   # GET /members

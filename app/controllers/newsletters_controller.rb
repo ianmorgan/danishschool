@@ -1,5 +1,4 @@
-class NewslettersController < ApplicationController
-  layout 'internal'
+class NewslettersController < AdminPageController
   
   def index
      @newsletters = Attachment.valid.newsletters.ordered

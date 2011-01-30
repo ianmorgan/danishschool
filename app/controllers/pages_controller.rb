@@ -1,5 +1,5 @@
-class PagesController < ApplicationController
-  layout "internal"
+class PagesController < AdminPageController
+
   
   # GET /pages
   # GET /pages.xml

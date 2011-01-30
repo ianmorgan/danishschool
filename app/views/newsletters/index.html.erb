@@ -13,7 +13,7 @@
 
 <% @newsletters.each do |letter| %>
   <tr>
-    <td><%=h letter.created_at.to_formatted_s(:day_month_year) %></td>
+    <td><%=h letter.created_at.to_formatted_s(:long) %></td>
     <td><%= link_to 'Download', :controller => 'attachment', :action => 'download', :id => letter.id %></td>
     <td><%= link_to 'Remove', :controller => 'attachment', :action => 'delete', :id => letter.id %></td>
   </tr>

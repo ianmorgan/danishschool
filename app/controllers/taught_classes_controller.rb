@@ -1,4 +1,4 @@
-class TaughtClassesController < ApplicationController
+class TaughtClassesController < AdminPageController
   layout "internal"
   
 

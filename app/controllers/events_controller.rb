@@ -1,5 +1,4 @@
-class EventsController < ApplicationController
-  layout "internal" 
+class EventsController < AdminPageController
   
   # GET /events
   # GET /events.xml

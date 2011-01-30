@@ -15,13 +15,12 @@ class ApplicationController < ActionController::Base
       !session[:login].nil?
   end
    
-  def is_admin_user
-  puts "here"
-      is_internal_user && session[:login][:is_admin]
- end
+  def is_admin_user  
+    is_internal_user && session[:login][:is_admin]
+  end
 
   def is_teacher_user
-      is_internal_user && session[:login][:is_teacher]
+    is_internal_user && session[:login][:is_teacher]
   end
 
  
@@ -29,8 +28,5 @@ class ApplicationController < ActionController::Base
      is_internal_user ? "internal" : "public"
  end
   
-  
-  def check_autentication
-    redirect_to(:controller => 'login', :action => 'show') if session[:login].nil?
-  end
+ 
 end
