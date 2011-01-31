@@ -36,6 +36,12 @@ class ContentController < ApplicationController
       standard_content_page 'sponsors'
    end
 
+   def links
+      get_recent_news_and_events
+      standard_content_page 'links'
+   end
+
+
    def newsletters 
      get_recent_news_and_events
      @header = Page.find_by_page('newsletters_header')
