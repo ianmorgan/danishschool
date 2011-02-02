@@ -19,7 +19,6 @@ body {
    background-color: rgb(229,25,55);
    color: #666666;
    padding: 10px;
-
    text-align: left;
    margin-top: 5px;
    margin-left:200px;
@@ -36,9 +35,8 @@ body {
 #infopanel{
    margin-top:20px;
 }
-#footer{float:left; width:800px; background-color:#F0F0F0; padding:10px;}
 
-
+/* quick links at top right */
 #headermenu ul li {
     border-left: 1px solid #FFFFFF;
     color: #FFFFFF;
@@ -48,13 +46,11 @@ body {
     padding-left: 10px;
     padding-right: 20px;
 }
-
 #headermenu ul li a:hover{
     text-decoration:none;
     color: #101010;
     background:inherit;   
 }
-
 #headermenu ul li a{
     text-decoration:none;
     color: white;   
@@ -75,28 +71,7 @@ body {
  }
 
 
-#pagecontent body, #pagecontent p, #pagecontent ol, #pagecontent ul, #pagecontent td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
-}
-
-/*GRAY PANEL*/
-.graypanel{
-   /*border:solid 1px #666666;*/ 
-   /*background-color:#F7F7F7;*/
- /*background-color:rgb(185,171,150);*/
-background-color:rgb(224,213,197);
- 
-   font: 0.8em Tahoma, sans-serif;
-   color: #666666;
-   padding:10px; 
-   margin-bottom:10px;
-   float: top;
-}
-
-
-/*TEXT STYLES*/
+/*TEXT STYLES  -- are these used ? */
 .bodytext {
 	font: 0.7em Tahoma, sans-serif;
 	color: #666666;
@@ -112,9 +87,6 @@ h1 {
   font-family:Tahoma,sans-serif;
   font-size:28px;
   font-weight:normal;
-  /*border-left: 2px solid rgb(229,25,55); 
-  margin-left: -5px;
-  padding-left: 5px; */
 }
 
 h2 {
@@ -131,24 +103,19 @@ h3 {
   font-weight:normal;
 }
 
+/* Floating panels to right */
+.graypanel{
+  background-color:rgb(224,213,197);
+  font: 0.8em Tahoma, sans-serif;
+  color: #666666;
+  padding:10px; 
+  margin-bottom:10px;
+  float: top;
+}
+
 .graypanel p {
-   
    font: Tahoma, sans-serif;
    color: #666666;
-
-}
-
-.xxtitletext {
-	font: 0.7em Tahoma, sans-serif;
-	font-size:36px;
-	font-weight:bold;
-	color:#CC0000;
-}
-.xxwhitetitle {
-	font: 0.7em Tahoma, sans-serif;
-	font-size:36px;
-	font-weight:bold;
-	color:#FFFFFF;
 }
 .graypanel .title {
 	font-size:20px;
@@ -160,87 +127,36 @@ h3 {
 	font-weight:normal;
 	color:rgb(229,25,55);
 }
-
-
-.xxsmallwhitetext {
-	font: 0.7em Tahoma, sans-serif;
-	font-size: 11px;
-	font-weight:bold;
-	color: #FFFFFF;
-}
 .graypanel  a{
 	font: Tahoma, sans-serif;
 	text-decoration:underline;
         color: #444444;
 }
 .graypanel  a:visited{
-	font: Tahoma, sans-serif;
-	text-decoration:underline;
-        color: #444444;
+  font: Tahoma, sans-serif;
+  text-decoration:underline;
+  color: #444444;
 }
-
-
 .graypanel  a:hover{
-	color: #101010;
-background-color:rgb(224,213,197);
- 
+  color: #101010;
+  background-color:rgb(224,213,197);
 }
 
-
-.smallwhitetext a:hover{
-	text-decoration:underline;
-}
-.smallgraytext {
-	font: 0.7em Tahoma, sans-serif;
-	font-size: 11px;
-	font-weight:bold;
-	color:#999999;
-}
-.smallgraytext a{
-	font: 0.7em Tahoma, sans-serif;
-	font-size: 11px;
-	font-weight:bold;
-	color:#999999;
-	text-decoration:none;
-}
-.smallgraytext a:hover{
-	text-decoration:underline;
-}
-.smallredtext {
-	font: 0.7em Tahoma, sans-serif;
-	font-size: 11px;
-	font-weight:bold;
-	color:#CC0000;
-}
-.smallredtext a{
-	font: 0.7em Tahoma, sans-serif;
-	font-size: 11px;
-	font-weight:bold;
-	color:#CC0000;
-	text-decoration:none;
-}
-.smallredtext a:hover{
-	text-decoration:underline;
-}
-
-
+/* Main Navigation Menu */
 #navigation {
   padding-top:5px;
   font-family:Tahoma,sans-background-colorserif;
   font-size: 0.9em;
 }
-
 #navigation ul {
   list-style: none;
   margin: 0; 
   padding: 0;
   padding-top: 1em;
 }
-
 #navigation li {
   display: inline;
 }
-
 #navigation a:link, #navigation a:visited {
   padding-left: 8px;
   padding-right: 20px;
