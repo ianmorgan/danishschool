@@ -1,35 +1,81 @@
 /* CSS Document */
 
+
 /*PAGE LAYOUT*/
 body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-
+  background-color: #666666;
+  color: #666666;
 }
-#logo{float:left; background-image:url(/images/dannish/danishschooldownunder.gif); width:150px; height:213px; background-repeat:no-repeat;}
-#topheader{float:right; width:650px; height:97px; background-color:#F0F0F0; position:relative}
-#toplinks{position:absolute; right:10px; top:10px;}
-#menu{float:right; width:650px; height:32px;}
-#submenu{float:right; width:600px; height:32px; background-image:url(/images/dannish/bg_submenu.gif); background-position:top; background-repeat:repeat-x;}
-#contenttext{float:right; width:526px;}
-#leftpanel{float:left; width:274px;}
+
+#page {
+  background-color: white;
+  margin: 40px auto;
+  padding: 0 40px 20px;
+  width: 870px;
+}
+
+#headercontent{
+   font: 0.8em Tahoma, sans-serif;
+   background-color: rgb(229,25,55);
+   color: #666666;
+   padding: 10px;
+
+   text-align: left;
+   margin-top: 5px;
+   margin-left:200px;
+   height:100px;
+}
+#topheader{
+  background-color:white;
+  background-image:url(/images/dannish/danishschooldownunder.gif);
+  background-repeat:no-repeat;
+  background-position:0px 8px;
+  height:150px;  
+}
+
+#infopanel{
+   margin-top:20px;
+}
 #footer{float:left; width:800px; background-color:#F0F0F0; padding:10px;}
 
 
-.pagecontent {
+#headermenu ul li {
+    border-left: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    float: right;
+    list-style: none outside none;
+    margin-top: 68px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#headermenu ul li a:hover{
+    text-decoration:none;
+    color: #101010;
+    background:inherit;   
+}
+
+#headermenu ul li a{
+    text-decoration:none;
+    color: white;   
+}
+
+
+
+#pagecontent {
    font: 0.8em Tahoma, sans-serif;
+   background-color: white;
    color: #666666;
    padding: 10px;
    text-align: left;
    margin-top: 5px;
-   float: right;
-   width: 500px;
+   width:500px;
+   display:inline;   
+   
  }
 
 
-.pagecontent body, .pagecontent p, .pagecontent ol, .pagecontent ul, .pagecontent td {
+#pagecontent body, #pagecontent p, #pagecontent ol, #pagecontent ul, #pagecontent td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
@@ -37,17 +83,20 @@ body {
 
 /*GRAY PANEL*/
 .graypanel{
-   border:solid 1px #666666; 
-   background-color:#F7F7F7; 
+   /*border:solid 1px #666666;*/ 
+   /*background-color:#F7F7F7;*/
+ /*background-color:rgb(185,171,150);*/
+background-color:rgb(224,213,197);
+ 
    font: 0.8em Tahoma, sans-serif;
    color: #666666;
    padding:10px; 
-   margin:10px;
+   margin-bottom:10px;
    float: top;
 }
 
 .graypanel p {
-   background-color:#F7F7F7; 
+   
    font: Tahoma, sans-serif;
    color: #666666;
 
@@ -65,25 +114,27 @@ body {
 
 
 h1 {
-color:#CC0000;
-font-family:Tahoma,sans-serif;
-font-size:26px;
-font-weight:bold;
+  color:rgb(229,25,55);
+  font-family:Tahoma,sans-serif;
+  font-size:28px;
+  font-weight:normal;
+  /*border-left: 2px solid rgb(229,25,55); 
+  margin-left: -5px;
+  padding-left: 5px; */
 }
 
-
 h2 {
-color:#CC0000;
-font-family:Tahoma,sans-serif;
-font-size:22px;
-font-weight:bold;
+  color:rgb(229,25,55);
+  font-family:Tahoma,sans-serif;
+  font-size:24px;
+  font-weight:normal;
 }
 
 h3 {
-color:#CC0000;
-font-family:Tahoma,sans-serif;
-font-size:18px;
-font-weight:bold;
+  color:rgb(229,25,55);
+  font-family:Tahoma,sans-serif;
+  font-size:22px;
+  font-weight:normal;
 }
 
 
@@ -156,7 +207,9 @@ font-weight:bold;
 
 
 #navigation {
-font-size: 90%;
+  padding-top:5px;
+  font-family:Tahoma,sans-background-colorserif;
+  font-size: 0.9em;
 }
 
 #navigation ul {
@@ -171,13 +224,50 @@ font-size: 90%;
 }
 
 #navigation a:link, #navigation a:visited {
-  padding: 0.4em 0.7em 0.4em 0.7em;
-  color: #FFFFFF;
-  background-color: #B51032; 
+  padding-left: 8px;
+  padding-right: 20px;
+  color: #666666;
+  background-color: white; 
   text-decoration: none;
-  border: 1px solid #711515;
+  border-left: 1px solid #666666;
 }
-#navigation a:hover { 
- color: #FFFFFF;
-  background-color: #711515;
+#navigation a:hover {
+ padding-left: 8px; 
+ color: #101010;
+ /*border-left: 2px solid #101010;*/
+}
+
+/* for new page */
+#news h2 {
+  font-size:18px;
+}
+#news div.newstext {
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#news div.allnewletters {
+  float:right;
+  width:150px;
+  padding:0px 10px 20px 10px;
+  margin-right:40px;
+  margin-top:30px;
+  background-color: rgb(229,25,55);
+  color:white; 
+}
+
+#news div.allnewletters h2{
+  color:white; 
+  font-size:20px;
+}
+
+#news div.allnewletters a{
+  color:white;
+  text-decoration:none; 
+}
+
+#news div.allnewletters a:hover{
+  color:#101010;
+  text-decoration:none;
+  background-color: rgb(229,25,55);
 }

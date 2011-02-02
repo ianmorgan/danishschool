@@ -10,68 +10,65 @@
 </head>
 <body>
 
-<div id="page" align="center">
+<div id="page">
 
-<div id="content" style="WIDTH: 800px">
-<div id="logo">
-<div class="whitetitle" style="MARGIN-TOP: 70px"></div></div>
-<div id="topheader">
-<div class="bodytext" align="left"><br><strong>Danish School Down 
-Under</strong><br><a href="mailto:danishschooldownunder@gmail.com">danishschooldownunder@gmail.com</a> 
+  
+    <!--<div id="logo">
+       <div class="whitetitle" style="MARGIN-TOP: 70px">
+      </div>
+   </div>-->
+    <div id="topheader">
+      <div id="xxlogo">
+      </div>
+      <div id="headercontent">
+       <div id="headermenu">
+	   <ul>
+		<li><%= link_to "Login", :controller => :login, :action => :show %></li>
+		<li><a href="<%= url_for(:controller => 'attachment', :action => 'download', :id => Attachment.latest_newsletter.id)%>" target="_blank">Newsletter</a></li>
+		<li><%= link_to "Contact", :controller => :content, :action => :contact_us %></a></li>
+		
+	    </ul>
+       </div>
+		
+     </div>
+   </div>
+  
+   <div id="navigation">
+    <ul>
+      <li><%= link_to "Home", :controller => :content, :action => :home %></li>
+      <li><%= link_to "Aim", :controller => :content, :action => :aim %></li>
+      <li><%= link_to "Practical", :controller => :content, :action => :practical %></li>
+      <li><%= link_to "Classes", :controller => :content, :action => :classes %></li>
+      <li><%= link_to "Teachers", :controller => :content, :action => :teachers %></li> 
+      <li><%= link_to "Committee", :controller => :content, :action => :committee %></li>
+      <li><%= link_to "History", :controller => :content, :action => :history%></li>
+      <li><%= link_to "Sponsors", :controller => :content, :action => :sponsors %></li>
+      <li><%= link_to "Links", :controller => :content, :action => :links %></li> 
+    </ul>
+   </div>
+   
+   
+   <table width="100%" style="margin-top:5px;" > 
+    <tr>
+     <td valign="top">
+       <div id="pagecontent">
+          <%= yield %>
+       </div>
+     </td>
+     <td width="260px" valign="top">
+       <div id="infopanel">
+
+       <%= render :partial => '/content/latest_news' %>
+       <%= render :partial => '/content/calendar' %>
+
+
+   </div>
+   </td>
+</tr>
+</table>
+   
+  
 </div>
-<div class="bodytext" align="left"> 
-</div>
-<div class="bodytext" align="left"><a 
-href="<%= url_for(:controller => 'attachment', :action => 'download', :id => Attachment.latest_newsletter.id)%>" 
-target="_blank">Latest newsletter in PDF format</a>
-</div>
-<div class="bodytext" align="left"><a 
-href="<%= url_for(:controller => 'content', :action => 'newsletters')%>" 
->All newsletters</a> 
- 
-</div></div>
-<div id="menu">
-<div class="smallwhitetext" 
-style="PADDING-RIGHT: 5px; PADDING-LEFT: 0px; PADDING-BOTTOM: 9px; PADDING-TOP: 9px" 
-align=right>
-  <%= link_to "Home", :controller => :content, :action => :home %>&nbsp;|&nbsp;
-  <%= link_to "Aim", :controller => :content, :action => :aim %>&nbsp;|&nbsp; 
-  <%= link_to "Practical", :controller => :content, :action => :practical %>&nbsp;|&nbsp; 
-  <%= link_to "Classes", :controller => :content, :action => :classes %>&nbsp;|&nbsp; 
-  <%= link_to "Teachers", :controller => :content, :action => :teachers %>&nbsp;|&nbsp; 
-  <%= link_to "Committee", :controller => :content, :action => :committee %>&nbsp;|&nbsp;
-  <%= link_to "History", :controller => :content, :action => :history%>&nbsp;|&nbsp; 
-  <%= link_to "Contact us", :controller => :content, :action => :contact_us %>&nbsp;|&nbsp; 
-  <%= link_to "Sponsors", :controller => :content, :action => :sponsors %>&nbsp;|&nbsp;
-  <%= link_to "Login", :controller => :login, :action => :show %> 
-</div></div>
-
-<div id="navigation">
-<ul>
-  <li><%= link_to "Home", :controller => :content, :action => :home %></li>
-  <li><%= link_to "Aim", :controller => :content, :action => :aim %></li>
-  <li><%= link_to "Practical", :controller => :content, :action => :practical %></li>
-  <li><%= link_to "Classes", :controller => :content, :action => :classes %></li>
-  <li><%= link_to "Teachers", :controller => :content, :action => :teachers %></li> 
-  <li><%= link_to "Committee", :controller => :content, :action => :committee %></li>
-  <li><%= link_to "History", :controller => :content, :action => :history%></li>
-  <li><%= link_to "Contact us", :controller => :content, :action => :contact_us %></li> 
-  <li><%= link_to "Sponsors", :controller => :content, :action => :sponsors %></li>
-  <li><%= link_to "Links", :controller => :content, :action => :links %></li>
-  <li><%= link_to "Login", :controller => :login, :action => :show %></li> 
-</ul>
-</div>
-
-<div class="pagecontent" style="LEFT: 803px" >
-   <%= yield %>
-</div>
-<div id="leftpanel">
-
-<%= render :partial => '/content/calendar' %>
-<%= render :partial => '/content/news' %>
-
-
-</div></div></div>
 
 </body>
 </html>

@@ -5,8 +5,12 @@ class NewsItem < ActiveRecord::Base
   validates_presence_of :news_date, :news_text
   
   named_scope :ordered, :order => "news_date desc"
- 
+  
   def trimmed_news_text
      trim_with_elipse(news_text)
+  end
+
+  def self.latest_news
+     ordered.first
   end
 end
