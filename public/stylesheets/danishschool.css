@@ -95,12 +95,6 @@ background-color:rgb(224,213,197);
    float: top;
 }
 
-.graypanel p {
-   
-   font: Tahoma, sans-serif;
-   color: #666666;
-
-}
 
 /*TEXT STYLES*/
 .bodytext {
@@ -137,38 +131,62 @@ h3 {
   font-weight:normal;
 }
 
+.graypanel p {
+   
+   font: Tahoma, sans-serif;
+   color: #666666;
 
-.titletext {
+}
+
+.xxtitletext {
 	font: 0.7em Tahoma, sans-serif;
 	font-size:36px;
 	font-weight:bold;
 	color:#CC0000;
 }
-.whitetitle {
+.xxwhitetitle {
 	font: 0.7em Tahoma, sans-serif;
 	font-size:36px;
 	font-weight:bold;
 	color:#FFFFFF;
 }
-.smalltitle {
-	font: 0.7em Tahoma, sans-serif;
+.graypanel .title {
 	font-size:20px;
-	font-weight:bold;
-	color:#CC0000;
+	font-weight:normal;
+	color:rgb(229,25,55);
 }
-.smallwhitetext {
+.graypanel .smalltitle {
+	font-size:14px;
+	font-weight:normal;
+	color:rgb(229,25,55);
+}
+
+
+.xxsmallwhitetext {
 	font: 0.7em Tahoma, sans-serif;
 	font-size: 11px;
 	font-weight:bold;
 	color: #FFFFFF;
 }
-.smallwhitetext a{
-	font: 0.7em Tahoma, sans-serif;
-	font-size: 11px;
-	font-weight:bold;
-	color: #FFFFFF;
-	text-decoration:none;
+.graypanel  a{
+	font: Tahoma, sans-serif;
+	text-decoration:underline;
+        color: #444444;
 }
+.graypanel  a:visited{
+	font: Tahoma, sans-serif;
+	text-decoration:underline;
+        color: #444444;
+}
+
+
+.graypanel  a:hover{
+	color: #101010;
+background-color:rgb(224,213,197);
+ 
+}
+
+
 .smallwhitetext a:hover{
 	text-decoration:underline;
 }

@@ -83,10 +83,10 @@ class ContentController < ApplicationController
 
    def news
      get_recent_events
-     @header = Page.find_by_page('classes_header')
+     @header = Page.find_by_page('news_header')
      @news = NewsItem.ordered.all
      @newsletters = Attachment.valid.newsletters.ordered
-     @footer = Page.find_by_page('classes_footer')
+     @footer = Page.find_by_page('news_footer')
      render :template => 'content/news'
    end
 

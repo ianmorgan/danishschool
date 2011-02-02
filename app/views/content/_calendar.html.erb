@@ -1,28 +1,39 @@
 <div class="graypanel" align="justify">
-  <span class="smalltitle">Calendar</span><br><br>
+  <span class="title">Calendar</span><br><br>
 
   <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
-  <tr>
+  <!--<tr>
     <td><font face="Tahoma" size="2" color="#CC0000">Date</font></td>
     <td><font face="Tahoma" size="2" color="#CC0000">Time</font></td>
     <td><font face="Tahoma" size="2" color="#CC0000">Event</font></td>
-  </tr>
+  </tr>-->
   
-
+   <% current_year = -1 %>
    <% @eventlister.each_by_day do |e, evenday|
      if evenday
-       bg = 'bgcolor="#c0c0c0"'
+       #bg = 'bgcolor="#c0c0c0"'
+       bg = ''
      else 
        bg = ''
      end
-   
+
+     
    %>
+
+   <% if e.event_date.year != current_year 
+       current_year = e.event_date.year %>
+      <tr><td colspan="3" <font size="3" >Events for <%=current_year.to_s%></font></td></tr>
+      <tr><td colspan="3">&nbsp;</td></tr>
+    
+   <% end %>
+   
+
    <tr>
-    <td <%=bg%> ><font face="Tahoma" size="2" color="#808080"><%=e.event_date.to_formatted_s(:rfc822)%></font></td>
-    <td <%=bg%> ><font face="Tahoma" size="2" color="#808080"><%=show_event_times(e)%></font></td>
-    <td <%=bg%> ><font face="Tahoma" size="2" color="#808080">
+    <td <%=bg%> ><%=e.event_date.to_formatted_s(:day_and_month)%></font></td>
+    <td <%=bg%> ><%=show_event_times(e)%></td>
+    <td <%=bg%> >
        <%=link_to e.title, :controller => 'content', :action => 'event', :id => e.id %>
-    </font></td>
+    </td>
    </tr>
    <% end %>
    
