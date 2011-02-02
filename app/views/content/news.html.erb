@@ -1,0 +1,22 @@
+<div id="news" >
+  <div class="allnewletters">
+    <h2>All Newletters</h2>
+    <table> 
+    <% @newsletters.each do |letter| %>
+      <tr>
+        <td><%= link_to letter.created_at.to_formatted_s(:date_as_words), :controller => 'attachment', :action => 'download', :id => letter.id %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+  <%= to_html(@header.content) %>
+  
+  <% @news.each do |news| %>
+    <h2><%=news.news_date.to_formatted_s :date_as_words %></h2>
+    <div class="newstext"> 
+      <%=to_html(news.news_text)%>
+    </div>
+  <% end %>
+  
+  <%= to_html(@footer.content) %>
+ </div>
