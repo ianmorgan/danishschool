@@ -4,12 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Members: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <title>Danish School DownUnder - <%= controller.action_name.capitalize %></title>
+  
   <%= stylesheet_link_tag 'danishschool' %>
+   <%= stylesheet_link_tag 'ie6_tweaks' if ie6? %>  
 </head>
 <body>
-
+ie6
 <div id="page">
 
   

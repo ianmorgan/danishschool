@@ -2,7 +2,11 @@ class LoginController < ApplicationController
    layout "internal"
    
    def show
-      render :template => 'login/show'
+      #todo -shared with content controller - refactor out 
+      @events = Event.find(:all, :order => 'event_date asc')
+      @eventlister = EventLister.new(@events)
+ 
+      render :template => 'login/show', :layout => 'public'
    end
    
    def login

@@ -2,7 +2,7 @@
   <span class="title">Latest news</span><br><br>
   
     <span class="smalltitle"><%=NewsItem.latest_news.news_date.to_formatted_s :date_as_words %>
-    <br/></span> 
+    </span> 
     <%=to_html(NewsItem.latest_news.news_text)%>
     
     <p><%= link_to "More news and old newsletters", :controller => :content, :action => :news %></p>
