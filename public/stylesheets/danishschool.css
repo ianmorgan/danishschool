@@ -60,8 +60,7 @@ body {
 
 /* user defined page content within this area */ 
 #pagecontent {
-   font: Tahoma, sans-serif;
-   font-size: 0.9em;
+   font: 0.9em Tahoma, sans-serif;
    background-color: white;
    color: #666666;
    padding: 10px;
