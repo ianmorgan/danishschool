@@ -49,7 +49,7 @@ class AttachmentController < AdminPageController
 
   def view
    a = Attachment.find(params[:id])
-   send_data a.data.to_blob, :type => a.mime_type , :disposition => 'inline', :x_sendfile => 'false'
+   send_data a.data.to_blob, :type => a.mime_type , :disposition => 'inline', :x_sendfile => false
    
    rescue
      render :nothing => true, :status => 404 
