@@ -15,7 +15,7 @@ class Member < ActiveRecord::Base
      find(:first, :conditions => { :email => email, :password => password }) 
   end
 
-  def valid_emaien
+  def valid_email
     #todo - is rails 3 still using TMail
     #TMail::Address.parse(email) if email.length > 0
   rescue
