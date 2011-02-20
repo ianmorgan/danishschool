@@ -5,20 +5,29 @@ class AttachmentController < AdminPageController
 
   def uploadmemberpicture
    member = Member.find(params[:id])   
-   member.attachment ||= Attachment.new  
+
+   if member
+     # always delete and recreate for fix unresolved issue
+     # with content cache when running through apache / passenger
    
-   attachment = member.attachment
+     member.attachment.delete if member.attachment 
+     member.attachment = Attachment.new  
    
-   f = params[:picture]
-   attachment.data = f.read
-   attachment.mime_type = f.content_type
-   attachment.purpose_code = 'member_picture'
-   attachment.name = member.name
-   attachment.save
+     attachment = member.attachment
    
-   flash[:notice] = 'Picture updated'
+     f = params[:picture]
+     attachment.data = f.read
+     attachment.mime_type = f.content_type
+     attachment.purpose_code = 'member_picture'
+     attachment.name = member.name
+     attachment.save
    
-   redirect_to edit_member_path(:id => params[:id])
+     flash[:notice] = 'Picture updated'
+   
+     redirect_to edit_member_path(:id => params[:id])
+   else
+     render :nothing => true, :status => 404
+   end  
 
   end
   
