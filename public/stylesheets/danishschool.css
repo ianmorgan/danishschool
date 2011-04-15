@@ -24,6 +24,7 @@ body {
    margin-left:200px;
    height:100px;
 }
+
 #topheader{
   background-color:white;
   background-image:url(/images/dannish/danishschooldownunder.gif);
@@ -147,7 +148,6 @@ h3 {
 }
 .graypanel  a:hover{
   color: #101010;
-  /*background-color:rgb(224,213,197); */
 }
 
 /* Main Navigation Menu */
@@ -176,7 +176,6 @@ h3 {
 #navigation a:hover {
  padding-left: 8px; 
  color: #101010;
- /*border-left: 2px solid #101010;*/
 }
 
 /* for new page */
@@ -212,4 +211,6 @@ h3 {
   color:#101010;
   text-decoration:none;
   background-color: rgb(229,25,55);
-}page
+}
+
+
